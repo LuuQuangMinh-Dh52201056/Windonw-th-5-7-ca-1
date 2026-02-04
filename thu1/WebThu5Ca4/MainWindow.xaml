@@ -1,0 +1,53 @@
+﻿<Window x:Class="WebThu5Ca4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WebThu5Ca4"
+        xmlns:localModels="clr-namespace:WebThu5Ca4.Models"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+    <Window.Resources>
+        <localModels:Monhoc x:Key="rsMonHoc"/>  
+    </Window.Resources>
+    <StackPanel>
+        <Label Content="Quan Ly Mon Hoc" HorizontalAlignment="Center" FontSize="24" FontWeight="Bold"/>
+        <Grid x:Name="gridMonhoc" DataContext="{StaticResource rsMonHoc}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            
+            <TextBlock Grid.Row="0" Grid.Column="1" Text="Mã số môn học"/>
+            <TextBlock Grid.Row="1" Grid.Column="1" Text="Tên Môn Học"/>
+            <TextBlock Grid.Row="2" Grid.Column="1" Text="Số Tiết"/>
+            
+            <TextBox Grid.Row="0"  Grid.Column="2" Text="{Binding Msmh}"/>
+            <TextBox Grid.Row="1"  Grid.Column="2" Text="{Binding Tenmh}"/>
+            <TextBox Grid.Row="2"  Grid.Column="2" Text="{Binding Sotiet}"/>
+            
+            <Button Grid.Row="0"  Grid.Column="4" Content="Thêm" x:Name="btnThem" Click="btnThem_Click"/>
+            <Button Grid.Row="1"  Grid.Column="4" Content="Sửa" x:Name="btnSua" Click="btnSua_Click"/>
+            <Button Grid.Row="2"  Grid.Column="4" Content="Xoá" x:Name="btnXoa" Click="btnXoa_Click"/>
+
+        </Grid>
+        <Label Content="Danh Sách Môn Học" FontSize="16" FontWeight="Bold"></Label>
+        <DataGrid Name="DgvMonHoc" AutoGenerateColumns="False" SelectionChanged="DgvMonHoc_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Mã Số Học Sinh" Binding="{Binding Msmh}"></DataGridTextColumn >
+                <DataGridTextColumn Header="Tên Môn Học" Binding="{Binding Tenmh}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Số Tiết" Binding="{Binding Sotiet}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </StackPanel>
+</Window>

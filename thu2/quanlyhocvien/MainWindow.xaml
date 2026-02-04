@@ -1,0 +1,121 @@
+﻿<Window x:Class="quanlyhocvien.MainWindow" 
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:local="clr-namespace:quanlyhocvien" 
+        xmlns:localModels="clr-namespace:quanlyhocvien.Models" 
+        xmlns:localMyModels="clr-namespace:quanlyhocvien.MyModels" 
+        mc:Ignorable="d" 
+        Title="MainWindow" Height="450" Width="900" 
+        Loaded="Window_Loaded">
+
+    <Window.CommandBindings>
+        <CommandBinding x:Name="cmdThem" 
+                        Command="local:MainWindow.lenhThem" 
+                        Executed="cmdThem_Executed" 
+                        CanExecute="cmdThem_CanExecute"/>
+        <CommandBinding x:Name="cmdXoa" 
+                        Command="local:MainWindow.lenhXoa" 
+                        Executed="cmdXoa_Executed" 
+                        CanExecute="cmdXoa_CanExecute"/>
+    </Window.CommandBindings>
+
+    <Window.Resources>
+        <x:Array x:Key="rsLitsHocVien" Type="localMyModels:CHocVien"></x:Array >
+        <x:Array x:Key="rsPhai" Type="localMyModels:CPhai">
+            <localMyModels:CPhai Value="Nam" Key="True"/>
+            <localMyModels:CPhai Value="Nu" Key="False"/>
+        </x:Array>
+        <localModels:Lylich x:Key="rsLyLich"></localModels:Lylich>
+    </Window.Resources>
+
+    <StackPanel Margin="10">
+
+        <Label Content="Danh sách học viên"
+               FontSize="16"
+               FontWeight="Bold"
+               HorizontalAlignment="Center"/>
+
+        <Grid x:Name="grdLyLich" DataContext="{StaticResource rsLyLich}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" Grid.Column="1" Text="Ma so hoc vien"/>
+            <TextBlock Grid.Row="1" Grid.Column="1" Text="Ten hoc vien"/>
+            <TextBlock Grid.Row="2" Grid.Column="1" Text="Ngay sinh"/>
+            <TextBlock Grid.Row="3" Grid.Column="1" Text="Phai"/>
+            <TextBlock Grid.Row="4" Grid.Column="1" Text="Ma lop"/>
+            <TextBlock Grid.Row="5" Grid.Column="1" Text="Ten lop"/>
+
+            <TextBox Grid.Row="0" Grid.Column="2" Text="{Binding Mshv}"/>
+            <TextBox Grid.Row="1" Grid.Column="2" Text="{Binding Tenhv}"/>
+            <DatePicker Grid.Row="2" Grid.Column="2" SelectedDate="{Binding Ngaysinh}"/>
+            <ComboBox x:Name="cmbPhai" Grid.Row="3" Grid.Column="2" 
+                      SelectedValuePath="Key" 
+                      DisplayMemberPath="Value" 
+                      ItemsSource="{StaticResource rsPhai}"
+                      SelectedValue="{Binding Phai}"/>
+            <ComboBox x:Name="cmbMaLop" Grid.Row="4" Grid.Column="2" 
+                      SelectedValuePath="Malop" 
+                      DisplayMemberPath="Malop"
+                      SelectedValue="{Binding Malop}"/>
+            <TextBox Grid.Row="5" Grid.Column="2" IsReadOnly="True"
+                     Text="{Binding ElementName=cmbMaLop, Path=SelectedItem.Tenlop}"/>
+
+            <Button Grid.Row="1" Grid.Column="4" Content="Them" Command="local:MainWindow.lenhThem"/>
+            <Button Grid.Row="2" Grid.Column="4" Content="Xoa" Command="local:MainWindow.lenhXoa"/>
+            <Button Grid.Row="3" Grid.Column="4" Content="Sua"/>
+
+        </Grid>
+
+        <DataGrid x:Name="DgHocVien"
+                  AutoGenerateColumns="False"
+                  CanUserAddRows="False"
+                  ItemsSource="{StaticResource rsLitsHocVien}">
+
+            <DataGrid.Columns>
+
+                <DataGridTextColumn Header="Mã học viên"
+                                    Binding="{Binding Mshv}"
+                                    Width="*"/>
+
+                <DataGridTextColumn Header="Tên học viên"
+                                    Binding="{Binding Tenhv}"
+                                    Width="2*"/>
+
+                <DataGridTextColumn Header="Ngày sinh"
+                                    Binding="{Binding Ngaysinh, StringFormat=dd/MM/yyyy}"
+                                    Width="*"/>
+
+                <DataGridTextColumn Header="Phái"
+                                    Binding="{Binding Phai}"
+                                    Width="*"/>
+
+                <DataGridTextColumn Header="Mã lớp"
+                                    Binding="{Binding Malop}"
+                                    Width="*"/>
+
+                <DataGridTextColumn Header="Ten lop"
+                                    Binding="{Binding TenLop}"
+                                    Width="*"/>
+
+            </DataGrid.Columns>
+
+        </DataGrid>
+    </StackPanel>
+</Window>
