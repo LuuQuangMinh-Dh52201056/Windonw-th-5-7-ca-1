@@ -1,0 +1,84 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "W:\\School\\Y4_2\\XayDungPhanMemWindow\\Buoi3\\WpfApp1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{70B3A836-2CD6-4E9A-8D14-E058C4BFC58C}|WpfApp1\\WpfApp1.csproj|w:\\school\\y4_2\\xaydungphanmemwindow\\buoi3\\wpfapp1\\wpfapp1\\mymodels\\hanghoavm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70B3A836-2CD6-4E9A-8D14-E058C4BFC58C}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\mymodels\\hanghoavm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70B3A836-2CD6-4E9A-8D14-E058C4BFC58C}|WpfApp1\\WpfApp1.csproj|w:\\school\\y4_2\\xaydungphanmemwindow\\buoi3\\wpfapp1\\wpfapp1\\ui\\windowhanghoa.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{70B3A836-2CD6-4E9A-8D14-E058C4BFC58C}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\ui\\windowhanghoa.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70B3A836-2CD6-4E9A-8D14-E058C4BFC58C}|WpfApp1\\WpfApp1.csproj|w:\\school\\y4_2\\xaydungphanmemwindow\\buoi3\\wpfapp1\\wpfapp1\\ui\\windowhanghoa.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70B3A836-2CD6-4E9A-8D14-E058C4BFC58C}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\ui\\windowhanghoa.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70B3A836-2CD6-4E9A-8D14-E058C4BFC58C}|WpfApp1\\WpfApp1.csproj|w:\\school\\y4_2\\xaydungphanmemwindow\\buoi3\\wpfapp1\\wpfapp1\\mymodels\\cbasemvvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70B3A836-2CD6-4E9A-8D14-E058C4BFC58C}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\mymodels\\cbasemvvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CBaseMVVM.cs",
+              "DocumentMoniker": "W:\\School\\Y4_2\\XayDungPhanMemWindow\\Buoi3\\WpfApp1\\WpfApp1\\MyModels\\CBaseMVVM.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\MyModels\\CBaseMVVM.cs",
+              "ToolTip": "W:\\School\\Y4_2\\XayDungPhanMemWindow\\Buoi3\\WpfApp1\\WpfApp1\\MyModels\\CBaseMVVM.cs",
+              "RelativeToolTip": "WpfApp1\\MyModels\\CBaseMVVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-07T03:43:00.671Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HangHoaVM.cs",
+              "DocumentMoniker": "W:\\School\\Y4_2\\XayDungPhanMemWindow\\Buoi3\\WpfApp1\\WpfApp1\\MyModels\\HangHoaVM.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\MyModels\\HangHoaVM.cs",
+              "ToolTip": "W:\\School\\Y4_2\\XayDungPhanMemWindow\\Buoi3\\WpfApp1\\WpfApp1\\MyModels\\HangHoaVM.cs",
+              "RelativeToolTip": "WpfApp1\\MyModels\\HangHoaVM.cs",
+              "ViewState": "AgIAAIkAAAAAAAAAAAAmwJ8AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-07T03:17:21.798Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "WindowHangHoa.xaml",
+              "DocumentMoniker": "W:\\School\\Y4_2\\XayDungPhanMemWindow\\Buoi3\\WpfApp1\\WpfApp1\\UI\\WindowHangHoa.xaml",
+              "RelativeDocumentMoniker": "WpfApp1\\UI\\WindowHangHoa.xaml",
+              "ToolTip": "W:\\School\\Y4_2\\XayDungPhanMemWindow\\Buoi3\\WpfApp1\\WpfApp1\\UI\\WindowHangHoa.xaml",
+              "RelativeToolTip": "WpfApp1\\UI\\WindowHangHoa.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-02-07T01:59:03.504Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "WindowHangHoa.xaml.cs",
+              "DocumentMoniker": "W:\\School\\Y4_2\\XayDungPhanMemWindow\\Buoi3\\WpfApp1\\WpfApp1\\UI\\WindowHangHoa.xaml.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\UI\\WindowHangHoa.xaml.cs",
+              "ToolTip": "W:\\School\\Y4_2\\XayDungPhanMemWindow\\Buoi3\\WpfApp1\\WpfApp1\\UI\\WindowHangHoa.xaml.cs",
+              "RelativeToolTip": "WpfApp1\\UI\\WindowHangHoa.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-07T03:02:52.095Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

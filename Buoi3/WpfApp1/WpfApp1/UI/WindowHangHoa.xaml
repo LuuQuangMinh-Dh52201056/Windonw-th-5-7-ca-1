@@ -1,0 +1,49 @@
+﻿<Window x:Class="WpfApp1.UI.WindowHangHoa"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1.UI"
+        mc:Ignorable="d"
+        DataContext="{StaticResource rsHangHoa}"
+        Title="WindowHangHoa" Height="450" Width="800">
+    <StackPanel Margin="10">
+        <Label Content="Quan Ly Hang Hoa" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Grid.Column="1" Text="Ma Hang"/>
+            <TextBlock Grid.Row="1" Grid.Column="1" Text="Ten Hang"/>
+            <TextBlock Grid.Row="2" Grid.Column="1" Text="Don Vi Tinh"/>
+            <TextBlock Grid.Row="3" Grid.Column="1" Text="Don Gia"/>
+            <TextBox Grid.Row="0" Grid.Column="2" Text="{Binding mahang}"/>
+            <TextBox Grid.Row="1" Grid.Column="2" Text="{Binding tenhang}"/>
+            <TextBox Grid.Row="2" Grid.Column="2" Text="{Binding dvt}"/>
+            <TextBox Grid.Row="3" Grid.Column="2" Text="{Binding dongia}"/>
+            <Button Grid.Row="0" Grid.Column="4" Content="Them" Command="{Binding lenhThem}"/>
+            <Button Grid.Row="1" Grid.Column="4" Content="Xoa" Command="{Binding lenhXoa}"/>
+            <Button Grid.Row="2" Grid.Column="4" Content="Sua" Command="{Binding lenhSua}"/>
+        </Grid>
+        <Label Content="Danh Sach Hang Hoa" FontSize="18" FontWeight="Bold" HorizontalAlignment="Left" Margin="0,10"/>
+        <DataGrid AutoGenerateColumns="False" IsReadOnly="True" ItemsSource="{Binding ListHangHoa}" SelectedItem="{Binding SelectedHangHoa}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Ma Hang" Binding="{Binding Mahang}"/>
+                <DataGridTextColumn Header="Ten Hang" Binding="{Binding Tenhang}"/>
+                <DataGridTextColumn Header="Don Vi Tinh" Binding="{Binding Dvt}"/>
+                <DataGridTextColumn Header="Don gia" Binding="{Binding Dongia}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </StackPanel>
+</Window>
